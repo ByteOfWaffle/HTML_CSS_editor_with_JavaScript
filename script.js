@@ -17,5 +17,5 @@ function fargebytt() {
 document.getElementById("htmlbytt").addEventListener("click", htmlbytt);
 
 function htmlbytt(){
-    alert("skibidi")
+tekst = document.getElementById("inputhtmltekst")    
 }
