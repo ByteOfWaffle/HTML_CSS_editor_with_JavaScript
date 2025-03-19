@@ -1,0 +1,13 @@
+.kort {
+display: flex;
+justify-content: center;
+gap: 5%;
+flex-wrap: wrap;
+margin-bottom: 40px;
+}
+
+.innerkort {
+width: 45%;
+min-width: 300px;
+margin-bottom: 20px;
+}
