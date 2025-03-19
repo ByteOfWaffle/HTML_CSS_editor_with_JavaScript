@@ -23,7 +23,7 @@ function htmlbytt(event){
 
 //Legge til HTML elementer i liste
 document.getElementById("leggTilElement").addEventListener("click", LTL) // LTL = legg til element
-
+document.getElementById("tomelementer").addEventListener("click", tomListe);
 function LTL(event){
 var liste = document.getElementById("liste");
 var element = document.getElementById("element").value;
@@ -33,8 +33,9 @@ var entry = document.createElement('li'); //Lager nytt li i HTML
 //Fjern individ element
     entry.addEventListener("click", function(event) {//Lager en click event på alle induvidualle li elementene.
         event.currentTarget.remove(); // Fjerner elementet som blir klikket, gjennom currentTarget (Del av info som kommer gjennom event)
-    
     });
 
 }
-
+function tomListe() {
+    document.getElementById("liste").innerHTML = ""; // Fjerner alle listeelementer
+}
