@@ -29,8 +29,12 @@ var liste = document.getElementById("liste");
 var element = document.getElementById("element").value;
 var entry = document.createElement('li'); //Lager nytt li i HTML
     entry.appendChild(document.createTextNode(element)); //Lager tekstnode med elementet brukeren skrev
-    liste.appendChild(entry); //Legger det ferdige li elementet inn i ul i html
-
+    liste.appendChild(entry); //Legger li elementet som ble skrevet av bruker inn i ul i HTML
+//Fjern individ element
+    entry.addEventListener("click", function(event) {//Lager en click event på alle induvidualle li elementene.
+        event.currentTarget.remove(); // Fjerner elementet som blir klikket, gjennom currentTarget (Del av info som kommer gjennom event)
     
+    });
+
 }
 
