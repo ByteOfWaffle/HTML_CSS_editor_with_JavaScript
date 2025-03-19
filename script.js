@@ -17,5 +17,8 @@ function fargebytt() {
 document.getElementById("htmlbytt").addEventListener("click", htmlbytt);
 
 function htmlbytt(){
-tekst = document.getElementById("inputhtmltekst")    
+tekst = document.getElementById("inputhtmltekst").value;
+document.getElementById("teksttilhtml").innerHTML = tekst
 }
+
+#
