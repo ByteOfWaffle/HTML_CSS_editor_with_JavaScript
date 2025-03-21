@@ -3,7 +3,7 @@
 document.getElementById("fargebytt").addEventListener("click", fargebytt);
 
 function fargebytt() {
-    farge = document.getElementById("farge").value;
+    var farge = document.getElementById("farge").value;
 
     if (CSS.supports("color", farge)) { 
         document.body.style.backgroundColor = farge;
@@ -17,8 +17,8 @@ function fargebytt() {
 document.getElementById("htmlbytt").addEventListener("click", htmlbytt);
 
 function htmlbytt(event){
-    tekst = document.getElementById("inputhtmltekst").value;
-    document.getElementById("teksttilhtml").innerHTML = tekst
+    var tekst = document.getElementById("inputhtmltekst").value;
+        document.getElementById("teksttilhtml").innerHTML = tekst
 }
 
 //Legge til HTML elementer i liste
@@ -44,7 +44,7 @@ function tomListe() {
 //Endre farge på skapte liste elementer 
 document.getElementById("endreLF").addEventListener("click", endreLF) //LF = listefarge
 function endreLF(){
-    farge = document.getElementById("fargeLF").value;
+    var farge = document.getElementById("fargeLF").value;
     if (CSS.supports("color", farge)) { 
         document.getElementById("liste").style.color = farge
     } else {
