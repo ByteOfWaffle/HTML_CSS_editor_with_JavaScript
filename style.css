@@ -2,12 +2,12 @@
 display: flex;
 justify-content: center;
 gap: 5%;
-flex-wrap: wrap;
 margin-bottom: 40px;
 }
 
 .innerkort {
-width: 45%;
-min-width: 300px;
+width: 35%;
 margin-bottom: 20px;
+border: 1px solid #e0e0e0;
+border-radius: 8px; 
 }

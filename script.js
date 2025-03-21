@@ -36,6 +36,23 @@ var entry = document.createElement('li'); //Lager nytt li i HTML
     });
 
 }
+// Fjerner alle listeelementer
 function tomListe() {
-    document.getElementById("liste").innerHTML = ""; // Fjerner alle listeelementer
+    document.getElementById("liste").innerHTML = ""; 
+}
+
+//Endre farge på skapte liste elementer 
+document.getElementById("endreLF").addEventListener("click", endreLF) //LF = listefarge
+function endreLF(){
+    farge = document.getElementById("fargeLF").value;
+    if (CSS.supports("color", farge)) { 
+        document.getElementById("liste").style.color = farge
+    } else {
+        alert("Fargen er ikke støttet");
+    }
+}
+//nullstill endret farge
+document.getElementById("nulstillLF").addEventListener("click", nulstillLF)
+function nulstillLF(){ 
+    document.getElementById("liste").style.color = "#000000"
 }
