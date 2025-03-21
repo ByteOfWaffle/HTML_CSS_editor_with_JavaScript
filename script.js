@@ -46,13 +46,19 @@ document.getElementById("endreLF").addEventListener("click", endreLF) //LF = lis
 function endreLF(){
     var farge = document.getElementById("fargeLF").value;
     if (CSS.supports("color", farge)) { 
-        document.getElementById("liste").style.color = farge
+        document.getElementById("liste").style.color = farge;
     } else {
         alert("Fargen er ikke støttet");
     }
 }
 //nullstill endret farge
-document.getElementById("nulstillLF").addEventListener("click", nulstillLF)
+document.getElementById("nulstillLF").addEventListener("click", nulstillLF);
 function nulstillLF(){ 
     document.getElementById("liste").style.color = "#000000"
 }
+
+var slider = document.getElementById("myRange");
+slider.oninput = function() { // Kjører når slideren får hvilken som helt input, aka ta på den
+    document.getElementById("liste").style.fontSize = slider.value + "px";
+    document.getElementById("teksttilhtml").style.fontSize = slider.value + "px";
+  }
