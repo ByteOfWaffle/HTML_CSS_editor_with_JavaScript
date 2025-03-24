@@ -62,3 +62,25 @@ var slider = document.getElementById("myRange");
 slider.oninput = function() { // Kjører når slideren får hvilken som helt input, aka ta på den
     document.getElementById("tekststr").style.fontSize = slider.value + "px";
   }
+
+//Endre farge på knapper
+//Denne endrer bakrunn på knapp
+document.getElementById("knappfargebyttbak").addEventListener("click", knappfargebyttbak)
+    function knappfargebyttbak(){
+        var farge = document.getElementById("fargeKF").value; //KF = KnappFarge
+        if (CSS.supports("color", farge)) { 
+            document.getElementById("knappfargebyttbak").style.backgroundColor = farge;
+        } else {
+            alert("Fargen er ikke støttet");
+        }
+  }
+//Denne endrer tekstfarge på knapp
+document.getElementById("knappfargebyttekst").addEventListener("click", knappfargebyttekst)
+function knappfargebyttekst(){
+    var farge = document.getElementById("fargeKFT").value; //KF = KnappFarge
+    if (CSS.supports("color", farge)) { 
+        document.getElementById("knappfargebyttekst").style.color = farge;
+    } else {
+        alert("Fargen er ikke støttet");
+    }
+}
