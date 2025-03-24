@@ -16,7 +16,7 @@ function fargebytt() {
 //Endre på HTML elementer
 document.getElementById("htmlbytt").addEventListener("click", htmlbytt);
 
-function htmlbytt(event){
+function htmlbytt(){
     var tekst = document.getElementById("inputhtmltekst").value;
         document.getElementById("teksttilhtml").innerHTML = tekst;
 }
@@ -60,6 +60,5 @@ function nulstillLF(){
 
 var slider = document.getElementById("myRange");
 slider.oninput = function() { // Kjører når slideren får hvilken som helt input, aka ta på den
-    document.getElementById("liste").style.fontSize = slider.value + "px";
-    document.getElementById("teksttilhtml").style.fontSize = slider.value + "px";
+    document.getElementById("tekststr").style.fontSize = slider.value + "px";
   }
